@@ -1,8 +1,9 @@
 
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
-
 import Testimonial from "./pages/Testimonial";
+
+
 
 
 const App = () => {
@@ -10,7 +11,7 @@ const App = () => {
    <div>
     <Navbar/>
     <Hero />
-    <Testimonial/>
+ <Testimonial/>
     
    </div>
   );
