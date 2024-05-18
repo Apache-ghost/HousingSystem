@@ -240,3 +240,24 @@ a {
 .social-media-icons a:hover {
   color: #007bff; /* Change the hover color to your desired value */
 }
+.comment {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.comment::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 80px;
+  height: 3px;
+  background-color: #007bff;
+}

@@ -48,6 +48,7 @@ text: 'This app has completely transformed my workflow.'
 function Testimonial() {
   return (
     <div className="card-container">
+        <h2 className='comment'>Hear what peoples said about us!</h2>
       {testimonials.map((testimonial, index) => (
         <div className="card" key={index}>
           <img src={`/images/${testimonial.image}`} className="card-image" alt="" />
