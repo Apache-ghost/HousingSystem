@@ -15,7 +15,34 @@ const testimonials = [
     image: './public/images/profile.jpg',
     name: 'Jane Smith',
     text: 'The best app Ive ever used!'
-  }
+  },
+
+
+{
+image: './public/images/profile2.jpg',
+name: 'Jane Smith',
+text: 'I love using this app every day!'
+},
+{
+image: './public/images/profile3.jpg',
+name: 'Michael Johnson',
+text: 'This is the best app Ive ever used!'
+},
+{
+image: './public/images/profile4.jpg',
+name: 'Emily Brown',
+text: 'This app has completely transformed my workflow.'
+},
+{
+    image: './public/images/profile5.jpg',
+    name: 'David Lee',
+    text: 'I cannot imagine going back to the old way of doing things.'
+    },
+    {
+    image: './public/images/profile6.jpg',
+    name: 'Sarah Kim',
+    text: 'This app has been a game-changer for my business.'
+    }
 ];
 
 function Testimonial() {
