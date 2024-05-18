@@ -171,3 +171,46 @@ a {
   line-height: 1.4;
   font-size: 1rem;
 }
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.about-us,
+.location,
+.contact-info,
+.follow-us {
+  flex-basis: 25%;
+  padding: 0 20px;
+}
+
+.social-media-icons a {
+  color: #fff;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
