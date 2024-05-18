@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookF, faTwitter, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
   return (
@@ -29,19 +31,19 @@ const Footer = () => {
         <div className="follow-us">
           <h3>Follow Us</h3>
           <div className="social-media-icons">
-            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-twitter"></i>
-            </a>
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-linkedin-in"></i>
-            </a>
-          </div>
+  <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+    <FontAwesomeIcon icon={faFacebookF} />
+  </a>
+  <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+    <FontAwesomeIcon icon={faTwitter} />
+  </a>
+  <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+    <FontAwesomeIcon icon={faInstagram} />
+  </a>
+  <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+    <FontAwesomeIcon icon={faLinkedinIn} />
+  </a>
+</div>
         </div>
       </div>
       <div className="copyright">
