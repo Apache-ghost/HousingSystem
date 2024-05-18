@@ -1,8 +1,7 @@
 
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
-
-import Testimonial from "./pages/Testimonial";
+import Property from "./pages/Property";
 
 
 const App = () => {
@@ -10,7 +9,7 @@ const App = () => {
    <div>
     <Navbar/>
     <Hero />
-    <Testimonial/>
+    <Property/>
     
    </div>
   );
