@@ -261,3 +261,12 @@ a {
   height: 3px;
   background-color: #007bff;
 }
+.rating {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.rating .active {
+  color: #ffc107;
+}
