@@ -5,5 +5,6 @@ import Contact from "./Contact";
 import Login from "./Login";
 import Testimonial from "./Testimonial";
 import Footer from "./Footer";
+import ViewProperty from "./View_Property";
 
-export { Home, About, Projects, Contact, Login, Testimonial,Footer};
+export { Home, About, Projects, Contact, Login, ViewProperty,Testimonial,Footer};
