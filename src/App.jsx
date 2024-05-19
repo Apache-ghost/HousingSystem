@@ -1,7 +1,7 @@
 
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
-import Property from "./pages/Property";
+import Property from "./pages/Property/Property";
 
 
 const App = () => {
@@ -10,7 +10,6 @@ const App = () => {
     <Navbar/>
     <Hero />
     <Property/>
-    
    </div>
   );
 }
