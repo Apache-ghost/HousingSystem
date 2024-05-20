@@ -12,8 +12,7 @@
 }
 
 .heading{
-    display: inline-flex;
-}
+    display: inline-flex;}
 
 .search{
     display: inline-block;
@@ -22,12 +21,10 @@
     padding: 10px;
     margin: 20px;
     margin-left: 700px;
-    box-shadow: 5px;
-}
+    box-shadow: 5px;}
 
 .title{
-    display: inline-block;
-}
+    display: inline-block;}
 
 .heady{
     font-size: 25px;
