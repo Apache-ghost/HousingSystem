@@ -1,7 +1,8 @@
 
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
-import Contact from "./pages/Contact";
+import Contact from "./pages/contact/Contact";
+
 import Testimonial from "./pages/Testimonial";
 
 
