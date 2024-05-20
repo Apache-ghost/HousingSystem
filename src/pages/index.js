@@ -6,5 +6,7 @@ import Login from "./Login";
 import Testimonial from "./Testimonial";
 import Footer from "./Footer";
 import ViewProperty from "./View_Property";
+import Listings from "./Listings";
+import  HouseForm from "./Add_Properties.jsx";
 
-export { Home, About, Projects, Contact, Login, ViewProperty,Testimonial,Footer};
+export { Home, About, Projects, Contact, Login,  Listings,ViewProperty, HouseForm ,Testimonial,Footer};
