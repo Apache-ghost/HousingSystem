@@ -17,22 +17,77 @@ const Contact = () => {
    
    <div className="flexColStart contactModes">
   {/* first row */}
-  <div className="flexColStart row">
+  <div className="flexStart row">
     <div className="flexColCenter mode">
       <div className="flexStart">
         <div className="flexCenter icon">
           <MdCall size={25} />
         </div>
         <div className="flexColStart detail">
-          <span>Call</span>
-          <span>+237 677 684 842</span>
+          <span className='primaryText'>Call</span>
+          <span className='secondaryText'>+237677684842</span>
         </div>
       </div>
       <div className="flexCenter button">
         Call Now
       </div>
     </div>
+
+
+    {/* second mode*/}
+    <div className="flexColCenter mode">
+      <div className="flexStart">
+        <div className="flexCenter icon">
+          <BsFillChatDotsFill size={25} />
+        </div>
+        <div className="flexColStart detail">
+          <span className='primaryText'>Chat</span>
+          <span className='secondaryText'>+237677684842</span>
+        </div>
+      </div>
+      <div className="flexCenter button">
+        Chat Now
+      </div>
+    </div>
+
   </div>
+
+  {/* second row */}
+  <div className="flexStart row">
+    <div className="flexColCenter mode">
+      <div className="flexStart">
+        <div className="flexCenter icon">
+          <BsFillChatDotsFill size={25} />
+        </div>
+        <div className="flexColStart detail">
+          <span className='primaryText'>Video Call</span>
+          <span className='secondaryText'>+237677684842</span>
+        </div>
+      </div>
+      <div className="flexCenter button">
+        Video Call Now
+      </div>
+    </div>
+
+
+    {/* fourth mode*/}
+    <div className="flexColCenter mode">
+      <div className="flexStart">
+        <div className="flexCenter icon">
+          <HiChatBubbleBottomCenter size={25} />
+        </div>
+        <div className="flexColStart detail">
+          <span className='primaryText'>Message</span>
+          <span className='secondaryText'>+237677684842</span>
+        </div>
+      </div>
+      <div className="flexCenter button">
+        Message Now
+      </div>
+    </div>
+
+  </div>
+
 </div>
    
    
