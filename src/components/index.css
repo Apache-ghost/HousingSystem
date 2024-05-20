@@ -126,6 +126,8 @@ a {
     font-size: 1.2rem;
   }
 }
+
+/*this is the styles of the testimonial*/
 .card {
   border: 1px solid rgba(87, 82, 82, 0.253);
   border-radius: 10px;
@@ -172,6 +174,7 @@ a {
   font-size: 1rem;
 }
 
+/*This is the styles of the Footer*/
 .footer {
   background-color: #333;
   color: #fff;
@@ -270,7 +273,7 @@ a {
 .rating .active {
   color: #ffc107;
 }
-
+/*This is the Styles of the view properties*/
 .view-property {
   margin: 20px;
   padding: 20px;

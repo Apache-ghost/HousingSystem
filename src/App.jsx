@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import Testimonial from "./pages/Testimonial";
 import  Footer  from "./pages/Footer";
 import ViewProperty from "./pages/View_Property";
-
+import   Listings from "./pages/Listings";
 
 
 
@@ -13,6 +13,7 @@ const App = () => {
    <div>
     <Navbar/>
     <Hero />
+    < Listings/>
     <ViewProperty/>
  <Testimonial/>
  <Footer />
