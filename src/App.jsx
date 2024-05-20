@@ -6,7 +6,6 @@ import { Hero, Card } from './components';
 
 
 const App = () => {
-  let mi = 10 
   return (
    <div>
     <Navbar/>
