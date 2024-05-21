@@ -6,7 +6,7 @@ import  Footer  from "./pages/Footer";
 import ViewProperty from "./pages/View_Property";
 import   Listings from "./pages/Listings";
 import  HouseForm from "./pages/Add_Properties";
-
+import  AddComment from "./pages/Add_Comment";
 
 
 const App = () => {
@@ -18,6 +18,7 @@ const App = () => {
     < Listings/>
   
     <ViewProperty/>
+    < AddComment/>
  <Testimonial/>
  <Footer />
     
