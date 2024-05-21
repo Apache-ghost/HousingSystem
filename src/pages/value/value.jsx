@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { Accordion, AccordionItem, AccordionItemHeading, AccordionItemButton, AccordionItemPanel, AccordionItemState } from 'react-accessible-accordion';
 import 'react-accessible-accordion/dist/fancy-example.css';
 import { MdOutlineArrowDropDown } from "react-icons/md";
@@ -37,8 +37,9 @@ const Value = () => {
                         >
                         {
                           data.map((item, i)=>{
+                            const [className, setClassName] = useState(null)
                             return (
-                                <AccordionItem className="accordionItem" key={i} uuid={i}>
+                                <AccordionItem className={'accordionItem $ {className}'} key={i} uuid={i}>
                                      <AccordionItemHeading>
                                         <AccordionItemButton className="flexCenter accordionButton">
                                             <AccordionItemState>
