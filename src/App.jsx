@@ -7,6 +7,7 @@ import ViewProperty from "./pages/View_Property";
 import   Listings from "./pages/Listings";
 import  HouseForm from "./pages/Add_Properties";
 import  AddComment from "./pages/Add_Comment";
+import StepsSection from "./pages/Simple_Steps";
 
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
     < Listings/>
   
     <ViewProperty/>
+    <StepsSection/>
     < AddComment/>
  <Testimonial/>
  <Footer />

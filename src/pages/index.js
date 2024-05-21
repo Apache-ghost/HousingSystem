@@ -9,5 +9,6 @@ import ViewProperty from "./View_Property";
 import Listings from "./Listings";
 import  HouseForm from "./Add_Properties.jsx";
 import  AddComment from "./Add_Comment.jsx";
+import StepsSection from "./Simple_Steps.jsx";
 
-export { Home, About, Projects, Contact, Login,  Listings,ViewProperty, HouseForm , AddComment,Testimonial,Footer};
+export { Home, About, Projects, Contact, Login,  Listings,ViewProperty, StepsSection,HouseForm , AddComment,Testimonial,Footer};
