@@ -8,7 +8,7 @@ import   Listings from "./pages/Listings";
 import  HouseForm from "./pages/Add_Properties";
 import  AddComment from "./pages/Add_Comment";
 import StepsSection from "./pages/Simple_Steps";
-
+import  Services from "./pages/Our_Service";
 
 const App = () => {
   return (
@@ -19,6 +19,7 @@ const App = () => {
     < Listings/>
   
     <ViewProperty/>
+    < Services/>
     <StepsSection/>
     < AddComment/>
  <Testimonial/>

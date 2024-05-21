@@ -10,5 +10,6 @@ import Listings from "./Listings";
 import  HouseForm from "./Add_Properties.jsx";
 import  AddComment from "./Add_Comment.jsx";
 import StepsSection from "./Simple_Steps.jsx";
+import  Services from "./Our_Service.jsx";
 
-export { Home, About, Projects, Contact, Login,  Listings,ViewProperty, StepsSection,HouseForm , AddComment,Testimonial,Footer};
+export { Home, About, Projects, Contact, Login,   Services,Listings,ViewProperty, StepsSection,HouseForm , AddComment,Testimonial,Footer};
