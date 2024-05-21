@@ -703,3 +703,25 @@ a {
 .add-comment-button:hover {
   background-color: #0056b3;
 }
+/* ... existing styles ... */
+
+.add-comment-rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.add-comment-rating span {
+  margin-right: 0.5rem;
+}
+
+.add-comment-rating .star {
+  color: #ccc;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-right: 0.25rem;
+}
+
+.add-comment-rating .star.active {
+  color: #ffc107;
+}

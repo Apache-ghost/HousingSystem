@@ -1,16 +1,24 @@
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 
 const AddComment = ({ onAddComment }) => {
   const [name, setName] = useState('');
   const [text, setText] = useState('');
+  const [rating, setRating] = useState(0);
+
+  const handleRatingChange = (value) => {
+    setRating(value);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (name.trim() && text.trim()) {
-      onAddComment({ name, text, image: './public/images/profile.jpg' });
+      onAddComment({ name, text, rating, image: './public/images/profile.jpg' });
       setName('');
       setText('');
+      setRating(0);
     }
   };
 
@@ -31,6 +39,17 @@ const AddComment = ({ onAddComment }) => {
           onChange={(e) => setText(e.target.value)}
           className="add-comment-textarea"
         ></textarea>
+        <div className="add-comment-rating">
+          <span>Rate your experience:</span>
+          {[1, 2, 3, 4, 5].map((value) => (
+            <FontAwesomeIcon
+              key={value}
+              icon={faStar}
+              className={`star ${value <= rating ? 'active' : ''}`}
+              onClick={() => handleRatingChange(value)}
+            />
+          ))}
+        </div>
         <button type="submit" className="add-comment-button">
           Submit
         </button>
