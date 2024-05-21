@@ -858,7 +858,7 @@ body {
   }
 }
 
-/*our service*/
+/*our service here */
 /* Reset Styles */
 * {
   margin: 0;
@@ -919,6 +919,7 @@ body {
 }
 
 /* Media Queries */
+
 @media (max-width: 768px) {
   .services .heading {
     font-size: 2rem;
@@ -934,7 +935,7 @@ body {
     margin-bottom: 1.5rem;
   }
 
-  .services .box h3 {
+  .services  .box h3 {
     font-size: 1.6rem;
     margin-bottom: 1rem;
   }
