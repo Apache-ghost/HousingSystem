@@ -33,7 +33,7 @@ const Hero = () => {
               <CountUp start={848} end={3930} duration={4}/>
               <span>+</span>
               </span>
-              <span> Prenium Products</span>
+              <span> Premium Products</span>
 
           </div>
           </div>

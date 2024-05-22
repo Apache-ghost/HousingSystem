@@ -22,8 +22,8 @@ const Property = () => {
                 <div className="flexColStart r-card">
                   <img src={card.image} alt="home"/>
                   <span>
-                    <span style={{color: "orange"}}>$</span>
                     <span>{card.price}</span>
+                    <span style={{color: "orange"}}>XAF</span>
                   </span>
                   <span className="primaryText">{card.name}</span>
                   <span className="secondaryText">{card.detail}</span>
@@ -37,13 +37,14 @@ const Property = () => {
   )
 }
 
-export default Property
+export default Property ;
 
 const SliderButtons = () => {
+  const swiper = useSwiper();
   return (
-    <div className="r-button">
-      <button onClick={()=> Swiper.slidePrev} >&lt;</button>
-      <button onClick={()=> Swiper.slideNext}>&gt;</button>
+    <div className="r-buttons">
+      <button onClick={()=> swiper.slidePrev()} >&lt;</button>
+      <button onClick={()=> swiper.slideNext()}>&gt;</button>
     </div>
   );
 };
