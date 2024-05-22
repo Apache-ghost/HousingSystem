@@ -1,4 +1,4 @@
-import { props, proofs } from "./list";
+import { props } from "./list";
 import "./Card.css";
 
 function Card() {
@@ -11,6 +11,13 @@ function Card() {
       {/* <p className='card-text'>Description: {prop.description}</p>*/}
     </div>
   ));
+
+  const proofs = [
+    { id: 1, value: "20+", var: "Years in the industry" },
+    { id: 2, value: "90%", var: "Customers satisfaction" },
+    { id: 3, value: "10K", var: "Properties Sold" },
+    { id: 4, value: "50+", var: "Country Served" },
+  ];
 
   const socials = proofs.map((proof) => (
     <div className="social-card" key={proof.id}>
@@ -36,8 +43,6 @@ function Card() {
       </div>
 
       <div className="property">{listitems}</div>
-
-      {/*<button>See More</button>*/}
 
       <div className="socialProof">{socials}</div>
     </>

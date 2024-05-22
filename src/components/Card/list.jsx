@@ -82,10 +82,3 @@ export const props = [
     description: "Appartment",
   },
 ];
-
-export const proofs = [
-  { id: 1, value: "20+", var: "Years in the industry" },
-  { id: 2, value: "90%", var: "Customers satisfaction" },
-  { id: 3, value: "10K", var: "Properties Sold" },
-  { id: 4, value: "50+", var: "Country Served" },
-];
