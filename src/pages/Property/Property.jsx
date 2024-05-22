@@ -3,6 +3,7 @@ import {Swiper, SwiperSlide, useSwiper} from 'swiper/react';
 import "swiper/css";
 import 'swiper/css/navigation';
 import  './Property.css';
+import { sliderSettings } from '../../utils/common';
 import data from "../../utils/slider.json"
 
 const Property = () => {
@@ -13,7 +14,8 @@ const Property = () => {
           <span className="orangeText">Best Choices</span>
           <span className="primaryText">Popular Properties</span>
         </div>
-        <Swiper>
+        <Swiper {...sliderSettings}>
+          <SliderButtons/>
           {
             data.map((card, i) => (
               <SwiperSlide key={i}>
@@ -36,3 +38,12 @@ const Property = () => {
 }
 
 export default Property
+
+const SliderButtons = () => {
+  return (
+    <div className="r-button">
+      <button onClick={()=> Swiper.slidePrev} >&lt;</button>
+      <button onClick={()=> Swiper.slideNext}>&gt;</button>
+    </div>
+  );
+};
