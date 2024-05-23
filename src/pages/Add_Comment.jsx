@@ -24,7 +24,7 @@ const AddComment = ({ onAddComment }) => {
 
   return (
     <div className="add-comment-container">
-      <h2 className="add-comment-title">Add Your Testimonial</h2>
+      <h2 className="add-comment-title">Comment Our Site Here</h2>
       <form onSubmit={handleSubmit} className="add-comment-form">
         <input
           type="text"
@@ -51,7 +51,7 @@ const AddComment = ({ onAddComment }) => {
           ))}
         </div>
         <button type="submit" className="add-comment-button">
-          Submit
+          Comment
         </button>
       </form>
     </div>
