@@ -1,10 +1,11 @@
-import { props } from "./list";
+//import { props } from "./list";
 import "./Card.css";
+import React from 'react'
 
-function Card() {
+function Card({props}) {
   const listitems = props.map((prop) => (
-    <div className="card" key={prop.id}>
-      <img className="card-img" src={prop.image} alt="Profile Picture"></img>
+    <div className="card" key={prop.property_id}>
+      <img className="card-img" src={`http://127.0.0.1:5000${prop.image}`} alt="House Picture"></img>
       <p className="card-text">{prop.cost} FCFA</p>
       <h2 className="card-title">{prop.location}</h2>
       <p className="card-text">{prop.category}</p>
@@ -29,17 +30,17 @@ function Card() {
   return (
     <>
       <div className="heading">
-        <span className="title">
-          <h1 className="heady">Explore Our Latest Properties</h1>
+        <div className="title">
+          <h1 className="heady">Explore Our Latest Properties</h1><br/>
           <p className="texty">
             See the latest uploaded properties in our platform
           </p>
-        </span>
+        </div>
 
-        <span className="search">
+        <div className="search">
           <input type="text" placeholder="Search Location" />
           <button className="button">Search</button>
-        </span>
+        </div>
       </div>
 
       <div className="property">{listitems}</div>

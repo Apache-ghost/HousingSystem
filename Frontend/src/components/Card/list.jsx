@@ -1,5 +1,5 @@
-import JPic from "../../../public/images/hero-image.png";
 
+import JPic from "../../../public/images/hero-image.png";
 export const props = [
   {
     id: 1,
@@ -82,3 +82,58 @@ export const props = [
     description: "Appartment",
   },
 ];
+
+
+function App() {
+  const [properties, setProperties] = useState([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentProperty, setCurrentProperty] = useState({})
+
+  useEffect(() => {
+    fetchProperties();
+  }, []);
+
+  const fetchProperties = async () => {
+    const reponse = await fetch("http://127.0.0.1:5000/properties");
+    const data = await reponse.json();
+    setProperties(data.properties);
+    console.log(data.properties);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setCurrentProperty({})
+  };
+
+  const openCreateModal = () => {
+    if (!isModalOpen) setIsModalOpen(true);
+  };
+
+  const openEditModal = (property) => {
+    if (isModalOpen) return
+    setCurrentProperty(property)
+    setIsModalOpen(true)
+  }
+
+  const onUpdate = () => {
+    closeModal()
+    fetchProperties()
+  }
+
+  return (
+    <>
+      <ContactList properties={properties} updateProperty = {openEditModal} updateCallback={onUpdate}/>
+      <button onClick={openCreateModal}>Create New Property</button>
+      {isModalOpen && (
+        <div className="modal">
+          <div className="modal-content">
+            <span className="close" onClick={closeModal}>&times;</span>
+            <ContactForm existingProperty={currentProperty} updateCallback={onUpdate}/>
+          </div>
+        </div>
+      )}
+    </>
+  );
+}
+
+export default App;
