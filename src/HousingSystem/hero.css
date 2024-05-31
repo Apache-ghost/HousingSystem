@@ -1,0 +1,21 @@
+button {
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+button:hover{
+  background-color: black;
+  color: white;
+}
+
+.top{
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: 768PX){
+    .top {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
