@@ -1,16 +1,8 @@
-
-import Hero from "./components/Hero";
-import Navbar from "./components/Navbar";
-import Property from "./pages/Property/Property";
-
+import Website from "./pages/Website";
 
 const App = () => {
   return (
-   <div>
-    <Navbar/>
-    <Hero />
-    <Property/>
-   </div>
+    <Website/>
   );
 }
 
