@@ -2,6 +2,7 @@ import React from 'react'
 import './Hero.css'
 import './index.css'
 import CountUp from 'react-countup';
+import SearchBar from "./SearchBar/SearchBar";
 
 const Hero = () => {
   return (
@@ -17,15 +18,12 @@ const Hero = () => {
           </div>
           <div className="flexColStart hero-des">
             <span>
-             are you ready to strat the search for your home? 
+             are you ready to start the search for your home? 
             </span>
             <span>
             Look no futher Move-in is Here for you.
             </span>
-            <div className="flexCenter search-bar">
-              <input type="text" />
-              <button className="button">Search</button>
-            </div>
+            <SearchBar/>
             </div>
         <div className="FlexCenter stats">
           <div className="flexColCenter stat">
