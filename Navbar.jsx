@@ -5,6 +5,7 @@ import { BiMenuAltRight } from 'react-icons/bi';
 import { NavLink } from 'react-router-dom';
 import 'firebase/auth';
 import { auth } from '../server/Config'; // Import the Firebase authentication module
+import OutsideClickHandler from 'react-outside-click-handler';
 
 const Navbar = () => {
   const [menuOpened, setMenuOpened] = useState(false);
@@ -39,13 +40,18 @@ const Navbar = () => {
         <div className="hero-title">
           <h1>MOVE-IN</h1>
         </div>
+        <OutsideClickHandler
+        onOutsideClick={() =>{setMenuOpened(false)}}
+        >
         <div className="flexCenter h-menu" style={getMenuStyles(menuOpened)}>
           <a href="/">Home</a>
-          <a href="/">About us</a>
-          <a href="/Property">Properties</a>
-          <a href="/">Agents</a>
-          <a href="/">Contact us</a>
-
+          {currentUser && (
+            <>
+              <a href="/Property">Properties</a>
+              <NavLink to="/Contact"><p>Contact us</p></NavLink>
+              <NavLink to="/Add"><p>Add Property</p></NavLink>
+            </>
+          )}
           {currentUser ? (
             <div className="current-user">
               {userPhotoURL ? (
@@ -67,8 +73,9 @@ const Navbar = () => {
             </NavLink>
           )}
         </div>
+        </OutsideClickHandler>
         <div className="menu-icon" onClick={() => setMenuOpened((prev) => !prev)}>
-          <BiMenuAltRight size={30} />
+          <BiMenuAltRight size={37} />
         </div>
       </div>
     </section>
