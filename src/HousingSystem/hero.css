@@ -16,6 +16,19 @@ button:hover{
   @media (min-width: 768PX){
     .top {
       grid-template-columns: 1fr 1fr;
+
+      i {
+  border-radius: 50%;
+  border: 1px;
+  padding: 20px;
+  background-color: lightgray;
+}
+
+.hero-section .hero-content img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
     }
   }
 }
