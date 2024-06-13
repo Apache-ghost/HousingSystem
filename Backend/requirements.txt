@@ -1,4 +1,4 @@
 flask
-werkzeug.utils
+werkzeug
 flask_cors
 flask_sqlalchemy
