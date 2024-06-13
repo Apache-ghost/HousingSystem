@@ -1,7 +1,7 @@
 import os
 from flask import Flask, request, jsonify, send_from_directory
 from config import app, db
-from models import Properties
+from models import Properties, Testimonials
 from werkzeug.utils import secure_filename
 
 UPLOAD_FOLDER = 'uploads'
@@ -20,6 +20,12 @@ def get_properties():
     properties = Properties.query.all()
     json_properties = [property.to_json() for property in properties]
     return jsonify({"properties": json_properties})
+
+@app.route("/testimonials", methods=["GET"])
+def get_testimonials():
+    testimonials = Testimonials.query.all()
+    json_testimonials = [testimonial.to_json() for testimonial in testimonials]
+    return jsonify({"testimonials": json_testimonials})
 
 @app.route("/create_property", methods=["POST"])
 def create_property():
@@ -47,6 +53,24 @@ def create_property():
         return jsonify({"message": str(e)}), 400
 
     return jsonify({"message": "Property created!"}), 201
+
+@app.route("/create_testimonial", methods=["POST"])
+def create_testimonial():
+    author = request.form.get("author")
+    rating = request.form.get("rating")
+    review = request.form.get("review")
+
+    if not all([author, rating, review]):
+        return jsonify({"message": "Enter author, rating and review"}), 400
+
+    new_testimonial = Testimonials(author=author, rating=rating, review=review)
+    try:
+        db.session.add(new_testimonial)
+        db.session.commit()
+    except Exception as e:
+        return jsonify({"message": str(e)}), 400
+
+    return jsonify({"message": "Testimonial created!"}), 201
 
 @app.route("/update_property/<int:id>", methods=["PUT"])
 def update_property(id):
@@ -84,6 +108,18 @@ def delete_property(id):
     db.session.commit()
 
     return jsonify({"message": "Property deleted"}), 200
+
+@app.route("/delete_testimonial/<int:id>", methods=["DELETE"])
+def delete_testimonial(id):
+    testimonial = Testimonials.query.get(id)
+
+    if not testimonial:
+        return jsonify({"message": "Testimonial not found"}), 404
+
+    db.session.delete(testimonial)
+    db.session.commit()
+
+    return jsonify({"message": "Testimonial deleted"}), 200
 
 if __name__ == "__main__":
     app.run(debug=True)
