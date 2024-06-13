@@ -19,3 +19,18 @@ class Properties(db.Model):
             "location": self.location,
             "description": self.description,
         }
+
+class Testimonials(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    author = db.Column(db.String(80), unique=False, nullable=False)
+    rating = db.Column(db.Float, unique=False, nullable=False)
+    review = db.Column(db.String(80), unique=False, nullable=False)
+    #image = db.Column(db.String(200), unique=False, nullable=False)
+
+    def to_json(self):
+        return {
+            "id": self.id,
+            "author": self.author,
+            "rating": self.rating,
+            "review": self.review,
+        }
