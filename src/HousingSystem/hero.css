@@ -47,6 +47,17 @@ button:hover{
   border-radius: 5px;
   max-width: 250px;
 }
+
+      button {
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+button:hover{
+  background-color: black;
+  color: white;
+}
     }
   }
 }
