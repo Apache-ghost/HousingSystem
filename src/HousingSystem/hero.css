@@ -29,6 +29,24 @@ button:hover{
   height: 200px;
   border-radius: 50%;
 }
+
+      .hero-section .hero-content .hero-detail {
+  text-align: center;
+  margin-top: 25px;
+  padding: 15px;
+}
+
+.hero-section .hero-content .hero-description {
+  border-color: black;
+  display: inline-flex;
+}
+
+.hero-detail {
+  border: 2px solid lightgrey;
+  margin: 10px;
+  border-radius: 5px;
+  max-width: 250px;
+}
     }
   }
 }
