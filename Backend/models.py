@@ -1,7 +1,7 @@
 from config import db
 
 class Properties(db.Model):
-    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    property_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     seller_id = db.Column(db.Integer, unique=False, nullable=True)
     category = db.Column(db.String(80), unique=False, nullable=False)
     cost = db.Column(db.Float, unique=False, nullable=False)
@@ -11,7 +11,7 @@ class Properties(db.Model):
 
     def to_json(self):
         return {
-            "id": self.id,
+            "propertyId": self.property_id,
             "sellerId": self.seller_id,
             "category": self.category,
             "cost": self.cost,
