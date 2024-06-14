@@ -6,6 +6,7 @@ import  './Property.css';
 import { sliderSettings } from '../../utils/common';
 import data from "../../utils/slider.json";
 import PropertyCard from '../../components/PropertyCard/PropertyCard';
+import Residence from '../Residences/Residence';
 
 
 const Property = () => {

@@ -24,7 +24,7 @@ const Hero = () => {
             Look no futher Move-in is Here for you.
             </span>
             <SearchBar/>
-            </div>
+          </div>
         <div className="FlexCenter stats">
           <div className="flexColCenter stat">
             <span>

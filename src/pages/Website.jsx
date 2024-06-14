@@ -16,7 +16,6 @@ const Website = () => {
             <Value/>
             <Contact/>
             <Residence/>
-            <Layout/>
        </div>
     )
 }
